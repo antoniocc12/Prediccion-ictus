@@ -14,11 +14,7 @@ import pickle
 
 # configuración página
 def config_page():
-    st.set_page_config(
-        page_title = 'Trabajo Fin Grado',
-        layout = 'wide'
-    )
-
+    st.set_page_config(page_title = 'Trabajo Fin Grado', layout = 'wide')
     st.markdown("""
     <style>
     .big-font {
@@ -26,9 +22,6 @@ def config_page():
     }
     </style>
     """, unsafe_allow_html=True)
-
-# cache
-st.cache(suppress_st_warning = True)
 
 def mostrar(path, width):
     img = Image.open(path)
@@ -163,6 +156,7 @@ def predecir():
         X = pd.concat([num_df, bin_df, cat_df], axis=1)
         pred = model.predict(X)
         st.markdown('##')
+        # Predicción binaria
         if pred[0] == 0:
             st.markdown("<h3 style='text-align: left;'>Negativo, no hay riesgo de apoplejía</h3>", unsafe_allow_html=True)
         else:

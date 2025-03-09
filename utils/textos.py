@@ -13,7 +13,7 @@ apoplejía o no. Todo ello integrado en una interfaz dinámica de Streamlit en l
 el doctor es capaz de predecir con una alta precisión esta enfermedad.
 '''
 dataset = '''
-En este estudio, el conjunto de datos original de accidente cerebrovascular se recopila de HealthData.gov (https://data.mendeley.com/datasets/x8ygrw87jw/1).\n
+En este estudio, el conjunto de datos original de accidente cerebrovascular se recopila de HealthData.gov.\n
 Se tratade un conjunto de datos desequilibrado, que contiene 11 características y 
 donde se incluyeron 783 casos de accidente cerebrovascular en un total de 43400 muestras registradas, 
 lo que representa solo el 1,18% del total.
