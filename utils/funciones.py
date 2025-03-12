@@ -154,13 +154,23 @@ def predecir():
         num_df = pd.DataFrame(num_df, columns=['age', 'avg_glucose_level', 'bmi'])
         bin_df = pd.DataFrame([binary_features], columns = ['gender', 'hypertension', 'heart_disease', 'ever_married', 'Residence_type'])
         X = pd.concat([num_df, bin_df, cat_df], axis=1)
-        pred = model.predict(X)
+        # pred = model.predict(X)
+        # st.markdown('##')
+        # # Predicción binaria
+        # if pred[0] == 0:
+        #     st.markdown("<h3 style='text-align: left;'>Negativo, no hay riesgo de apoplejía</h3>", unsafe_allow_html=True)
+        # else:
+        #     st.markdown("<h3 style='text-align: left; color: red;'>Positivo, alta probabilidad de ictus</h3>", unsafe_allow_html=True)
+        prop_pred = model.predict_proba(X)
         st.markdown('##')
-        # Predicción binaria
-        if pred[0] == 0:
-            st.markdown("<h3 style='text-align: left;'>Negativo, no hay riesgo de apoplejía</h3>", unsafe_allow_html=True)
+        # Probabilidad de padecer ictus
+        if prop_pred[0][1] < 0.33:
+            st.markdown(f"<h3 style='text-align: left; color: black;'>Riesgo bajo de padecer ictus</h3>", unsafe_allow_html=True)
+        elif prop_pred[0][1] < 0.66:
+            st.markdown(f"<h3 style='text-align: left; color: orange;'>Riesgo medio de padecer ictus</h3>", unsafe_allow_html=True)
         else:
-            st.markdown("<h3 style='text-align: left; color: red;'>Positivo, alta probabilidad de ictus</h3>", unsafe_allow_html=True)
+            st.markdown(f"<h3 style='text-align: left; color: red;'>Riesgo alto de padecer ictus</h3>", unsafe_allow_html=True)
+
 
 def conclusiones():
 
