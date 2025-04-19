@@ -144,7 +144,7 @@ def predecir():
         elif fuma == 'Fumo':
             categorical_features.append('smokes')
         else:
-            categorical_features.append('nan')
+            categorical_features.append('Unknown')
 
         cat_df = pd.DataFrame([categorical_features], columns = ['work_type', 'smoking_status'])
         cat_df = oHec.transform(cat_df)
