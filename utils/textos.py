@@ -29,6 +29,6 @@ Entre los factores más significativos para sufrir un ataque cerebrovascular enc
 '''
 con2='''
 Para la predicción médica de apoplejía basada en indicadores fisiológicos de posibles pacientes con accidente cerebrovascular, 
-se ha propuesto un modelo de clasificación gaussiano que logra un valor bajo la curva ROC de 78.9%, una exactitud balanceada de 69.16% y 
-una sensibilidad de 90.6%.
+se ha propuesto una regresión logística que logra una AUC PR de 8.04%, AUC ROC de 83.07%, exactitud balanceada de 74.82% y 74.52%
+de sensibilidad.
 '''

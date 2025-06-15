@@ -1,15 +1,9 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import seaborn as sns
 from PIL import Image
-import streamlit.components.v1 as components
-import plotly.graph_objs as go
 import matplotlib.pyplot as plt
-from plotly.offline import init_notebook_mode, iplot, plot
-import sys, os
 import utils.textos as tx
-import base64
 import pickle
 
 # configuración página
@@ -163,6 +157,7 @@ def predecir():
         #     st.markdown("<h3 style='text-align: left; color: red;'>Positivo, alta probabilidad de ictus</h3>", unsafe_allow_html=True)
         prop_pred = model.predict_proba(X)
         st.markdown('##')
+
         # Probabilidad de padecer ictus
         if prop_pred[0][1] < 0.33:
             st.markdown(f"<h3 style='text-align: left; color: black;'>Riesgo bajo de padecer ictus</h3>", unsafe_allow_html=True)
