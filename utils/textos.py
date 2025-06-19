@@ -14,7 +14,7 @@ el doctor es capaz de predecir con una alta precisión esta enfermedad.
 '''
 dataset = '''
 En este estudio, el conjunto de datos original de accidente cerebrovascular se recopila de HealthData.gov.\n
-Se tratade un conjunto de datos desequilibrado, que contiene 11 características y 
+Se trata de un conjunto de datos desequilibrado, que contiene 11 características y 
 donde se incluyeron 783 casos de accidente cerebrovascular en un total de 43400 muestras registradas, 
 lo que representa solo el 1,18% del total.
 
@@ -22,13 +22,13 @@ lo que representa solo el 1,18% del total.
 con1='''
 Entre los factores más significativos para sufrir un ataque cerebrovascular encontramos:
 - Tener edad avanzada
-- El nivel de glucosa en sangre
-- El índice de masa muscular
+- El tipo de empleo que se desempeña
+- Un alto nivel de glucosa en sangre
 - Tener antecedentes clínicos como hipertensión o alguna enfermedad cardíaca
 - Ser fumador frecuente
 '''
 con2='''
-Para la predicción médica de apoplejía basada en indicadores fisiológicos de posibles pacientes con accidente cerebrovascular, 
+Para la predicción médica de apoplejía basada en indicadores fisiológicos y metabólicos, 
 se ha propuesto una regresión logística que logra una AUC PR de 8.04%, AUC ROC de 83.07%, exactitud balanceada de 74.82% y 74.52%
 de sensibilidad.
 '''
