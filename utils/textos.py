@@ -16,7 +16,7 @@ dataset = '''
 En este estudio, el conjunto de datos original de accidente cerebrovascular se recopila de HealthData.gov.\n
 Se trata de un conjunto de datos desequilibrado, que contiene 11 características y 
 donde se incluyeron 783 casos de accidente cerebrovascular en un total de 43400 muestras registradas, 
-lo que representa solo el 1,18% del total.
+lo que representa solo el 1,8% del total.
 
 '''
 con1='''
